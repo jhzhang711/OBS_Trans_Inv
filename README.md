@@ -4,7 +4,7 @@ Seismological Transdimensional Bayesian Inversion Tools for OBS in Marine Enviro
 ## 📌 
 
 This is a transdimensional Bayesian inversion tool applicable to marine environments. 
-The code largely follows the methodology described in Bodin et al. (2012). However, it additionally accounts for the influence of the overlying water layer on ocean bottom seismometers(OBS) by incorporating the water layer thickness as a prior in the inversion process. We have referred to the work of Takeshi Akuhara et al. (2023) in this section.
+The code largely follows the methodology described in Bodin et al. (2012). However, it additionally accounts for the influence of the overlying water layer on ocean bottom seismometers(OBS) by incorporating the water layer thickness as a prior in the inversion process. We have referred to the work of Akuhara et al. (2023) in this section.
 
 ## 📦 
 
