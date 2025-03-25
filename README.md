@@ -11,7 +11,9 @@ The code largely follows the methodology described in Bodin et al. (2012). Howev
 ```
 
 ├── codes-inv/         # codes
-├── tests/             # demo
+├── RFx.obs            # RF Observations
+├── SWD_xxxxx.obs      # Dispersion  Observations
+├── REF_in.mod         # Initial Model for Inversion
 ├── .gitignore         # Git 忽略文件
 ├── README.md          # 说明文档
 └── LICENSE            # 许可证
