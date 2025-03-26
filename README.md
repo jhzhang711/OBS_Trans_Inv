@@ -37,6 +37,7 @@ module load lapack
 
 ```sh
 # for example
+mkdir -p ./OUT
 mpirun ./codes-inv/JointINV > ${STA}.out
 ```
 
