@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ########################
-STA=B17L
+STA=demo
 PS=Joint-${STA}.ps
 Depth1=0
 Depth2=100
@@ -27,11 +27,12 @@ cat ./OUT/data_best_group.out | awk '{print $1,$2}' | gmt psxy -J -R -W1p,red -K
 gmt psxy -T -JX1.5i/1i -R-5/25/-0.8/1.2 -Ba5f1:"Time after P (s)":/a0S -K -O -Y2.0i  >>  ${PS}
 cat ./RF2.obs | awk '{if(NR>1) print $1,$2*2}' | gmt psxy -J -R -W1p -K -O >> ${PS}
 cat ./OUT/data_bestrg2.out | awk '{print $1,$2*2}' | gmt psxy -J -R -W1p,red -K -O  >>  ${PS}
+gmt psxy -T -JX1.5i/1i -R-5/25/-0.8/1.2 -Ba5f1:"Time after P (s)":/a0S -K -O -Y1.25i  >>  ${PS}
 cat ./RF3.obs | awk '{if(NR>1) print $1,$2*2}' | gmt psxy -J -R -W1p -K -O >> ${PS}
 cat ./OUT/data_bestrg3.out | awk '{print $1,$2*2}' | gmt psxy -J -R -W1p,red -K -O  >>  ${PS}
 
 
-gmt psbasemap -JX1.5i/-2.5i -R2.0/5.0/${Depth1}/${Depth2} -Bxa0.5f0.25+l"Vs (km/s)" -Bya10f2+l"Depth (km)" -BnSwE -K -O -Y-2.15i -X2i>>  ${PS} #8.2i
+gmt psbasemap -JX1.5i/-2.5i -R2.0/5.0/${Depth1}/${Depth2} -Bxa0.5f0.25+l"Vs (km/s)" -Bya10f2+l"Depth (km)" -BnSwE -K -O -Y-3.15i -X2i>>  ${PS} #8.2i
 
 IN=./OUT/posteriorg.out
 max=`cat ${IN} | awk '{if(NR>1 && $2<=100) print $3}' | sort -g | tail -1`
